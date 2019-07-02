@@ -1,7 +1,7 @@
-The Intercept Podcasts
-() Deconstructed
-() Intercepted
-() Murderville, GA
+The Intercept Podcasts<br>
+() Deconstructed<br>
+() Intercepted<br>
+() Murderville, GA<br>
 =============================
 
 KODI / XBMC / Firestick addon for the audio podcasts from The Intercept
