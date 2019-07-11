@@ -3,7 +3,7 @@ from resources.lib import theinterceptpodcasts
 
 plugin = Plugin()
 
-# base url for fetching podcasts 
+URL0 = "http://api.spokenlayer.com/feed/channel/v1-intercept-news2-ext/3c9929b72538c12bd92ac6762f8d798b9d4e8cdca7692ea74f466061d01816cb"
 URL = "http://feeds.megaphone.fm/deconstructed"
 URL2 = "http://feeds.megaphone.fm/intercepted"
 URL3 = "https://rss.prod.firstlook.media/murderville/podcast.rss"
@@ -14,6 +14,14 @@ def main_menu():
     main menu 
     """
     items = [
+        {
+            'label': plugin.get_string(20000), 
+            'path': plugin.url_for('spoken_edition'),
+            'thumbnail': "http://media.spokenlayer.com/cover-art/2016/10/01/the-intercept-v2-10-1-1400x1400.png"},
+        {
+            'label': plugin.get_string(20001), 
+            'path': plugin.url_for('spoken_edition1'),
+            'thumbnail': "http://media.spokenlayer.com/cover-art/2016/10/01/the-intercept-v2-10-1-1400x1400.png"},
         {
             'label': plugin.get_string(30001), 
             'path': plugin.url_for('all_episodes'),
@@ -39,6 +47,32 @@ def main_menu():
             'path': plugin.url_for('all_murderGA1'),
             'thumbnail': "https://theintercept-static.imgix.net/usq/490edc26-8485-4094-a20c-dc4ce70207b1/1dcfad38-a2d0-4e29-a86b-4420b3980e4b.jpeg?auto=compress,format&cs=srgb&dpr=2&h=440&w=440&fit=crop&crop=faces%2Cedges&_=7f3dc1b866c965bc3eee2890e79e85c3"},
     ]
+
+    return items
+
+@plugin.route('/spoken_edition/')
+def spoken_edition():
+    """
+    contains playable podcasts listed as just-in
+    """
+    soup0 = theinterceptpodcasts.get_soup0(URL0)
+    
+    playable_podcast0 = theinterceptpodcasts.get_playable_podcast0(soup0)
+    
+    items = theinterceptpodcasts.compile_playable_podcast0(playable_podcast0)
+
+    return items
+
+@plugin.route('/spoken_edition1/')
+def spoken_edition1():
+    """
+    contains playable podcasts listed as just-in
+    """
+    soup0 = theinterceptpodcasts.get_soup0(URL0)
+    
+    playable_podcast01 = theinterceptpodcasts.get_playable_podcast01(soup0)
+    
+    items = theinterceptpodcasts.compile_playable_podcast01(playable_podcast01)
 
     return items
 
@@ -110,7 +144,6 @@ def all_murderGA():
     items = theinterceptpodcasts.compile_playable_murderGA(playable_murderGA)
 
     return items
-
 
 @plugin.route('/all_murderGA1/')
 def all_murderGA1():
