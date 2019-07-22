@@ -113,7 +113,7 @@ def get_playable_podcast01(soup):
     """
     subjects = []
 
-    for content in soup.find_all('item', limit=1):
+    for content in soup.find_all('item', limit=3):
         
         try:        
             link = content.find('enclosure')
@@ -216,7 +216,7 @@ def get_playable_podcast1(soup):
     """
     subjects = []
 
-    for content in soup.find_all('item', limit=1):
+    for content in soup.find_all('item', limit=3):
         
         try:        
             link = content.find('enclosure')
@@ -319,7 +319,7 @@ def get_playable_intercepted1(soup2):
     """
     subjects = []
 
-    for content in soup2.find_all('item', limit=1):
+    for content in soup2.find_all('item', limit=3):
         
         try:        
             link = content.find('enclosure')
@@ -423,7 +423,7 @@ def get_playable_murderGA1(soup3):
     """
     subjects = []
 
-    for content in soup3.find_all('item', limit=1):
+    for content in soup3.find_all('item', limit=3):
         
         try:        
             link = content.find('enclosure')
