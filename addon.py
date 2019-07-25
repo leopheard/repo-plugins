@@ -27,7 +27,7 @@ def all_episodes():
     """
     contains playable podcasts listed as just-in
     """
-    soup1 = mainaddon.get_soup(URL1)
+    soup1 = mainaddon.get_soup1(URL1)
     playable_podcast = mainaddon.get_playable_podcast(soup1)
     items = mainaddon.compile_playable_podcast(playable_podcast)
     return items

@@ -57,7 +57,7 @@ def compile_playable_podcast(playable_podcast):
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
-            'path': podcast['URL'],
+            'path': podcast['url'],
 #            'info': podcast['desc'],
             'is_playable': True,
     })
@@ -69,7 +69,7 @@ def get_playable_podcast1(soup1):
     @param: parsed html page            
     """
     subjects = []
-    for content in soup1.find_all('item', limit=5):
+    for content in soup1.find_all('item', limit=6):
         try:        
             link = content.find('enclosure')
             link = link.get('url')
