@@ -135,7 +135,7 @@ def compile_new_to_criminal(compile_ntc):
         	    'info': 'Description TEXT HERE',
         	    'is_playable': True},
 		    {'label': 'Episode 51: Money Tree',
-        	    'thumbnail': 'https:\/\/thisiscriminal.com\/wp-content\/uploads\/2016\/09\/Money_Tree_white-01-1-300x300.png',
+        	    'thumbnail': 'https://thisiscriminal.com/wp-content/uploads/2016/09/Money_Tree_white-01-1-300x300.png',
         	    'path': 'https://https:/dts.podtrac.com/redirect.mp3/dovetail.prxu.org/criminal/058d60c0-b85e-497a-8e8c-46ec039a2483/01_Episode_51__Money_Tree.mp3',
         	    'info': 'Description TEXT HERE',
         	    'is_playable': True},
@@ -145,7 +145,6 @@ def compile_new_to_criminal(compile_ntc):
         	    'info': 'Description TEXT HERE',
         	    'is_playable': True},
 ]
-
     return items
 
 
