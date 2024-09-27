@@ -1,3 +1,35 @@
+v1.2.23 (2023-03-12)
+- improved constructing video urls
+	
+v1.2.22 (2023-02-26)
+- fixed youtube videos
+
+v1.2.21 (2023-02-21)
+- fixed premium videos
+
+v1.2.20 (2023-01-15)
+- fixed some youtube-id's by removing leading/trailing spaces
+- fixed playing of videos using MPEG-DASH (kudo's to peak3d)
+- updated name
+- updated logo
+- less loging
+	
+v1.2.19 (2020-11-10)
+- fixed premium videos after a website change
+
+v1.2.18 (2020-06-05)
+- fixed playback for youtube videos
+
+v1.2.17 (2020-05-02)
+- added video on frontpage category
+
+v1.2.16 (2019-09-15)
+- added premium video category
+- fixes due to website change (september 2019). Let's hope they keep working
+- added maximum video quality setting for the new m3u8 videos
+- fix for trailers
+- removed http:// urls
+
 v1.2.15 (2019-03-01)
 - vimeo disabled oauth1, causing the vimeo addon to break. Therefore not using that addon anymore
 - improved detecting if the video is a twitch live-stream
